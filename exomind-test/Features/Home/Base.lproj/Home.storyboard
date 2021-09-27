@@ -52,15 +52,27 @@
                             <constraint firstItem="e4r-d3-rzt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EDK-gZ-7el"/>
                             <constraint firstItem="hPk-W1-Xlz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="SCD-Lh-fRG"/>
                             <constraint firstItem="3ae-wv-mxE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Znl-jl-vhd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ae-wv-mxE" secondAttribute="trailing" constant="24" id="q6v-lk-RuC"/>
                             <constraint firstItem="3ae-wv-mxE" firstAttribute="top" secondItem="hPk-W1-Xlz" secondAttribute="bottom" constant="60" id="udt-e5-H0s"/>
                             <constraint firstItem="e4r-d3-rzt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wZw-tk-SqI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="DYD-pH-bXn" kind="show" identifier="goToshowWeather" id="oOL-uU-fmh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-472" y="-3"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="A9h-Td-3xc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" id="DYD-pH-bXn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kTZ-oZ-Jel"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rc3-Kg-qZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="-81"/>
         </scene>
     </scenes>
     <resources>
