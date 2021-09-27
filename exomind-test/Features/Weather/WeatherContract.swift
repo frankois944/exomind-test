@@ -9,8 +9,9 @@
 protocol WeatherViewContractProtocol {
     
     func weatherLoaded(items: [WeatherDataObject])
-    func progressUpdated(current: Int, total: Int)
+    func progressUpdated(current: Double)
     func showProgressMessage(_ message: String?)
+    func showErrorMessage(_ error: Error)
 }
 
 // Presenter contract

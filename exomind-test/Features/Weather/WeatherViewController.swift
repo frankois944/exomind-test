@@ -86,13 +86,18 @@ extension WeatherViewController: WeatherViewContractProtocol {
         progressIndicatorView.setTitle("Recommencer", for: .normal)
     }
     
-    func progressUpdated(current: Int, total: Int) {
-        let progress = CGFloat(current) / CGFloat(total)
-        progressIndicatorView.setProgress(progress: progress, false)
-        progressIndicatorView.setTitle("\(Int(progress * 100)) %", for: .normal)
+    func progressUpdated(current: Double) {
+        progressIndicatorView.setProgress(progress: CGFloat(current), false)
+        progressIndicatorView.setTitle("\(Int(current * 100)) %", for: .normal)
     }
     
     func showProgressMessage(_ message: String?) {
         messageIndicatorLabel.text = message
+    }
+    
+    func showErrorMessage(_ error: Error) {
+        let alert = UIAlertController.init(title: "Erreur", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

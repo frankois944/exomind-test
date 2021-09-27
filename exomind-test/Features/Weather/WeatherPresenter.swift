@@ -42,20 +42,32 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
         
         startTimerMessage()
         weatherService.getWeathers(citiesName: cities, delay: delayGettingData) { [weak self] current, total in
-            // forward to the ciew the progression
-            self?.view.progressUpdated(current: current, total: total)
+            // forward to the view the progression
+            self?.view.progressUpdated(current: Double(current) / Double(total))
         } onCompletion: { [weak self] result in
             switch result {
             case .success(let weatherObj):
-                self?.weatherItems.removeAll()
-                self?.weatherItems.append(contentsOf: weatherObj)
-                self?.view.weatherLoaded(items: self?.weatherItems ?? [])
+                self?.forwardSuccess(data: weatherObj)
             case .failure(let error):
-                break
+                self?.forwardError(error)
             }
             self?.stopTimerMessage()
             self?.isLoading = false
         }
+    }
+    
+    private func forwardSuccess(data: [WeatherDataObject]) {
+        weatherItems.removeAll()
+        weatherItems.append(contentsOf: data)
+        view.weatherLoaded(items: weatherItems)
+    }
+    
+    private func forwardError(_ error: Error) {
+        // error should a human readable message, we need a enum with managed error case (ie: Network error)
+        view.showErrorMessage(error)
+        view.showProgressMessage(nil)
+        view.progressUpdated(current: 0)
+        view.weatherLoaded(items: [])
     }
     
     // MARK: - Timer for progress message

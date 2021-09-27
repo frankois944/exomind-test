@@ -6,7 +6,6 @@
 //
 
 import Moya
-import RxMoya
 import RxSwift
 
 class WeatherService: WeatherServiceProtocol {
