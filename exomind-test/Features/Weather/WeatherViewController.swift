@@ -12,12 +12,13 @@ class WeatherViewController: UIViewController {
     // MARK: - IBoutlet
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var progressIndicatorView: ButtonProgressBar!
     @IBOutlet weak var messageIndicatorLabel: UILabel!
+    @IBOutlet weak var progressIndicatorContainerView: UIView!
     
     // MARK: Properties
     
     let presenter: WeatherPresenterContractProtocol = WeatherPresenter(weatherService: WeatherService())
+    private var progressIndicatorView: ButtonProgressBar!
     
     // MARK: - Init
     
@@ -27,7 +28,22 @@ class WeatherViewController: UIViewController {
         presenter.loadWeather()
     }
     
+    private func initProgressBar() {
+        progressIndicatorView = ButtonProgressBar(frame: progressIndicatorContainerView.bounds)
+        progressIndicatorContainerView.addSubview(progressIndicatorView)
+        progressIndicatorView.addTarget(self, action: #selector(doLoadWeather), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initProgressBar()
+    }
+
     // MARK: - Actions
+    
+    @IBAction func doLoadWeather(_ sender: Any) {
+        presenter.loadWeather()
+    }
     
     // MARK: - Cleanup
     

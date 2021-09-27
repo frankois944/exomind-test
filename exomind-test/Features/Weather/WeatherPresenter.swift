@@ -11,9 +11,11 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     
     // MARK: - Properties
     
+    let delayGettingData = 2
     var view: WeatherViewContractProtocol!
     let weatherService: WeatherServiceProtocol
     var updateMessageTimer: Timer?
+    var isLoading = false
     
     private(set) var weatherItems = [WeatherDataObject]()
     
@@ -35,8 +37,11 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     // MARK: - Contract
     
     func loadWeather() {
+        guard isLoading == false else { return }
+        isLoading = true
+        
         startTimerMessage()
-        weatherService.getWeathers(citiesName: cities, delay: 10) { [weak self] current, total in
+        weatherService.getWeathers(citiesName: cities, delay: delayGettingData) { [weak self] current, total in
             // forward to the ciew the progression
             self?.view.progressUpdated(current: current, total: total)
         } onCompletion: { [weak self] result in
@@ -49,6 +54,7 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
                 break
             }
             self?.stopTimerMessage()
+            self?.isLoading = false
         }
     }
     
@@ -82,9 +88,9 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     }
     
     func detach() {
-        self.view = nil
-        self.weatherService.cancelGettingData()
-        self.stopTimerMessage()
+        weatherService.cancelGettingData()
+        stopTimerMessage()
+        view = nil
     }
     
     // MARK: - Cleanup
