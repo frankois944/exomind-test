@@ -7,11 +7,18 @@
 
 /// View contract
 protocol WeatherViewContractProtocol {
+    
+    func weatherLoaded(items: [WeatherDataObject])
+    func progressUpdated(current: Int, total: Int)
 }
 
 // Presenter contract
 protocol WeatherPresenterContractProtocol {
     
+    var weatherItems: [WeatherDataObject] { get }
+    var cities: [String] { get }
+    
+    func loadWeather()
     func attach(view: WeatherViewContractProtocol)
     func detach()
 }

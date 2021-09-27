@@ -5,8 +5,12 @@
 //  Created by macartevacances on 27/09/2021.
 //
 
-import Moya
-
 protocol WeatherServiceProtocol {
-    func getWeather(cityName: String, onCompletion: @escaping (Result<WeatherDataObject, Error>) -> Void) -> Cancellable
+    
+    func getWeathers(citiesName: [String],
+                     delay: Int,
+                     onProgression: @escaping ((_ current: Int, _ total: Int) -> Void),
+                     onCompletion: @escaping (Result<[WeatherDataObject], Error>) -> Void)
+    
+    func cancelGettingData()
 }

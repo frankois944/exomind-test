@@ -7,8 +7,14 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController, WeatherViewContractProtocol {
+class WeatherViewController: UIViewController {
 
+    // MARK: - IBoutlet
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var progressIndicatorView: ButtonProgressBar!
+    @IBOutlet weak var messageIndicatorLabel: UILabel!
+    
     // MARK: Properties
     
     let presenter: WeatherPresenterContractProtocol = WeatherPresenter(weatherService: WeatherService())
@@ -18,11 +24,10 @@ class WeatherViewController: UIViewController, WeatherViewContractProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach(view: self)
+        presenter.loadWeather()
     }
     
     // MARK: - Actions
-    
-    // MARK: - Contract
     
     // MARK: - Cleanup
     
@@ -38,5 +43,33 @@ class WeatherViewController: UIViewController, WeatherViewContractProtocol {
         #if DEBUG
         print("DEINIT \(self)")
         #endif
+    }
+}
+
+// MARK: - UITableViewDataSource
+
+extension WeatherViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.weatherItems.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherCityTableViewCell.identifier, for: indexPath) as! WeatherCityTableViewCell
+        cell.fillData(presenter.weatherItems[indexPath.row])
+        return cell
+    }
+}
+
+// MARK: - WeatherViewContractProtocol
+
+extension WeatherViewController: WeatherViewContractProtocol {
+    
+    func weatherLoaded(items: [WeatherDataObject]) {
+        tableView.reloadData()
+    }
+    
+    func progressUpdated(current: Int, total: Int) {
+        
     }
 }

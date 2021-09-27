@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, HomeViewContractProtocol {
+class HomeViewController: UIViewController {
 
     // MARK: Properties
     
@@ -26,12 +26,6 @@ class HomeViewController: UIViewController, HomeViewContractProtocol {
         presenter.goToWeather()
     }
     
-    // MARK: - Contract
-    
-    func navigateToWeatherScreen() {
-        performSegue(withIdentifier: "goToshowWeather", sender: nil)
-    }
-    
     // MARK: - Cleanup
     
     override func didMove(toParent parent: UIViewController?) {
@@ -47,4 +41,14 @@ class HomeViewController: UIViewController, HomeViewContractProtocol {
         print("DEINIT \(self)")
         #endif
     }
+}
+
+// MARK: - Contract
+
+extension HomeViewController: HomeViewContractProtocol {
+    
+    func navigateToWeatherScreen() {
+        performSegue(withIdentifier: "goToshowWeather", sender: nil)
+    }
+    
 }
