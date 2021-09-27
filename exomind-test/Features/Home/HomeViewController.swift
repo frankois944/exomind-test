@@ -22,6 +22,15 @@ class HomeViewController: UIViewController, HomeViewContractProtocol {
     
     // MARK: - Actions
     
+    @IBAction func goToshowWeather(_ sender: Any) {
+        presenter.goToWeather()
+    }
+    
+    // MARK: - Contract
+    
+    func navigateToWeatherScreen() {
+        performSegue(withIdentifier: "goToshowWeather", sender: nil)
+    }
     
     // MARK: - Cleanup
     

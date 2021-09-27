@@ -16,8 +16,11 @@ class HomePresenter: HomePresenterContractProtocol {
     init() {
     }
     
-    // MARK: - Actions
+    // MARK: - Contract
     
+    func goToWeather() {
+        view.navigateToWeatherScreen()
+    }
     
     // MARK: - MVP attachment
     
