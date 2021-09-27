@@ -67,9 +67,16 @@ extension WeatherViewController: WeatherViewContractProtocol {
     
     func weatherLoaded(items: [WeatherDataObject]) {
         tableView.reloadData()
+        progressIndicatorView.setTitle("Recommencer", for: .normal)
     }
     
     func progressUpdated(current: Int, total: Int) {
-        
+        let progress = CGFloat(current) / CGFloat(total)
+        progressIndicatorView.setProgress(progress: progress, false)
+        progressIndicatorView.setTitle("\(Int(progress * 100)) %", for: .normal)
+    }
+    
+    func showProgressMessage(_ message: String?) {
+        messageIndicatorLabel.text = message
     }
 }
