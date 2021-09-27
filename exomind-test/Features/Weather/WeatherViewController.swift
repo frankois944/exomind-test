@@ -26,17 +26,13 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         presenter.attach(view: self)
         presenter.loadWeather()
+        initProgressBar()
     }
     
     private func initProgressBar() {
         progressIndicatorView = ButtonProgressBar(frame: progressIndicatorContainerView.bounds)
         progressIndicatorContainerView.addSubview(progressIndicatorView)
         progressIndicatorView.addTarget(self, action: #selector(doLoadWeather), for: .touchUpInside)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        initProgressBar()
     }
 
     // MARK: - Actions
