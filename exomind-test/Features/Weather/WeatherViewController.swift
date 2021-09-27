@@ -30,9 +30,12 @@ class WeatherViewController: UIViewController {
     }
     
     private func initProgressBar() {
-        progressIndicatorView = ButtonProgressBar(frame: progressIndicatorContainerView.bounds)
-        progressIndicatorContainerView.addSubview(progressIndicatorView)
-        progressIndicatorView.addTarget(self, action: #selector(doLoadWeather), for: .touchUpInside)
+        // fixing an UI bug on loading the view
+        DispatchQueue.main.async {
+            self.progressIndicatorView = ButtonProgressBar(frame: self.progressIndicatorContainerView.bounds)
+            self.progressIndicatorContainerView.addSubview(self.progressIndicatorView)
+            self.progressIndicatorView.addTarget(self, action: #selector(self.doLoadWeather), for: .touchUpInside)
+        }
     }
 
     // MARK: - Actions
