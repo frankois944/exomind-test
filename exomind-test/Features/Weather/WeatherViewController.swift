@@ -11,7 +11,7 @@ class WeatherViewController: UIViewController, WeatherViewContractProtocol {
 
     // MARK: Properties
     
-    let presenter: WeatherPresenterContractProtocol = WeatherPresenter()
+    let presenter: WeatherPresenterContractProtocol = WeatherPresenter(weatherService: WeatherService())
     
     // MARK: - Init
     

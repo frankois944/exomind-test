@@ -12,10 +12,12 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     // MARK: - Properties
     
     var view: WeatherViewContractProtocol!
+    let weatherService: WeatherServiceProtocol
     
     // MARK: - Init
     
-    init() {
+    init(weatherService: WeatherServiceProtocol) {
+        self.weatherService = weatherService
     }
     
     // MARK: - Contract
