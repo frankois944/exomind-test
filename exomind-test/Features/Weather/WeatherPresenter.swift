@@ -11,13 +11,18 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     
     // MARK: - Properties
     
-    let delayGettingData = 2
     var view: WeatherViewContractProtocol!
-    let weatherService: WeatherServiceProtocol
     var updateMessageTimer: Timer?
     var isLoading = false
+    let delayGettingData = 10
+    let delayShowProgressMessage: TimeInterval = 6
+    let weatherService: WeatherServiceProtocol
+
+    // MARK: Data
     
     private(set) var weatherItems = [WeatherDataObject]()
+    
+    // MARK: City to search
     
     let cities = ["Rennes", "Paris", "Nantes", "Bordeaux", "Lyon"]
     
@@ -63,7 +68,7 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     }
     
     private func forwardError(_ error: Error) {
-        // error should a human readable message, we need a enum with managed error case (ie: Network error)
+        // error should be a human readable message, we need a enum with managed error case (ie: Network error)
         view.showErrorMessage(error)
         view.showProgressMessage(nil)
         view.progressUpdated(current: 0)
@@ -74,9 +79,11 @@ class WeatherPresenter: WeatherPresenterContractProtocol {
     
     private func startTimerMessage() {
         showProgressMessage()
-        updateMessageTimer = Timer.scheduledTimer(withTimeInterval: 6, repeats: true, block: { [weak self] timer in
-            self?.showProgressMessage()
-        })
+        updateMessageTimer = Timer.scheduledTimer(withTimeInterval: delayShowProgressMessage,
+                                                  repeats: true,
+                                                  block: { [weak self] timer in
+                                                    self?.showProgressMessage()
+                                                  })
     }
     
     private func showProgressMessage() {

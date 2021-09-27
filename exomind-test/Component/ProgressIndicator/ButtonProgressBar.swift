@@ -22,6 +22,7 @@
 
 
 /// Récupéré depuis https://github.com/thePsguy/ButtonProgressBar-iOS
+/// !! Composant buggé, il calcul mal la taille de son layer !!
 
 import UIKit
 
