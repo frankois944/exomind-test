@@ -39,16 +39,16 @@ class WeatherService: WeatherServiceProtocol {
                      delay: Int,
                      onProgression: @escaping ((Int, Int) -> Void),
                      onCompletion: @escaping (Result<[WeatherDataObject], Error>) -> Void) {
-        
+        // cancel previous API request if needed
+        cancelGettingData()
+        // Build request
         var arrayWeather = [WeatherDataObject]()
         var currentItem = 0
         let obs = citiesName.map { city in
             getWeather(cityName: city, delay: citiesName.firstIndex(of: city) == 0 ? 0 : delay)
         }
-        // cancel previous API request if needed
-        cancelGettingData()
         // For chainable API request, using Rx programming is the best solution (and cleanest)
-        // Concat run one by one the API call and stop when an error occure
+        // Concat run one by one the API call and stop when an error occur
         cancellable = Observable.concat(obs).subscribe { response in
             arrayWeather.append(response)
             currentItem+=1
