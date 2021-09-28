@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0ACFEEA2701BBF800F70B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFEE92701BBF800F70B8B /* AppDelegate.swift */; };
+		F0ACFEEC2701BBF800F70B8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFEEB2701BBF800F70B8B /* SceneDelegate.swift */; };
+		F0ACFEF12701BBF800F70B8B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFEEF2701BBF800F70B8B /* Home.storyboard */; };
+		F0ACFEF32701BBFA00F70B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFEF22701BBFA00F70B8B /* Assets.xcassets */; };
+		F0ACFEF62701BBFA00F70B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFEF42701BBFA00F70B8B /* LaunchScreen.storyboard */; };
+		F0ACFF012701BBFA00F70B8B /* exomind_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF002701BBFA00F70B8B /* exomind_testTests.swift */; };
+		F0ACFF0C2701BBFA00F70B8B /* exomind_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF0B2701BBFA00F70B8B /* exomind_testUITests.swift */; };
+		F0ACFF1A2701BC7800F70B8B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFF192701BC7800F70B8B /* README.md */; };
+		F0ACFF272701CBF600F70B8B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF262701CBF600F70B8B /* HomePresenter.swift */; };
+		F0ACFF292701CC0000F70B8B /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF282701CC0000F70B8B /* HomeContract.swift */; };
+		F0ACFF302701CFB400F70B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFF2F2701CFB400F70B8B /* Main.storyboard */; };
+		F0ACFF322701D09B00F70B8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF312701D09B00F70B8B /* HomeViewController.swift */; };
+		F0ACFF392701D6A000F70B8B /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0ACFF382701D6A000F70B8B /* Weather.storyboard */; };
+		F0ACFF3C2701D6EB00F70B8B /* WeatherContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF3B2701D6EB00F70B8B /* WeatherContract.swift */; };
+		F0ACFF3E2701D6F400F70B8B /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF3D2701D6F400F70B8B /* WeatherPresenter.swift */; };
+		F0ACFF402701D70000F70B8B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF3F2701D70000F70B8B /* WeatherViewController.swift */; };
+		F0ACFF452701D82000F70B8B /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF442701D82000F70B8B /* WeatherServiceProtocol.swift */; };
+		F0ACFF472701D83600F70B8B /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF462701D83600F70B8B /* WeatherService.swift */; };
+		F0ACFF4C2701D88700F70B8B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F0ACFF4B2701D88700F70B8B /* Moya */; };
+		F0ACFF4E2701D8E900F70B8B /* OpenWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF4D2701D8E900F70B8B /* OpenWeatherApi.swift */; };
+		F0ACFF502701D94200F70B8B /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF4F2701D94200F70B8B /* ApiConstant.swift */; };
+		F0ACFF532701DCBC00F70B8B /* GetWeatherFromCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF522701DCBC00F70B8B /* GetWeatherFromCityResponse.swift */; };
+		F0ACFF562701DD2300F70B8B /* WeatherDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF552701DD2300F70B8B /* WeatherDataObject.swift */; };
+		F0ACFF592701E13E00F70B8B /* WeatherCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF582701E13E00F70B8B /* WeatherCityTableViewCell.swift */; };
+		F0ACFF5C2701E3F400F70B8B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F0ACFF5B2701E3F400F70B8B /* Kingfisher */; };
+		F0ACFF62270200F000F70B8B /* ButtonProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ACFF61270200F000F70B8B /* ButtonProgressBar.swift */; };
+		F0ACFF64270202D800F70B8B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = F0ACFF63270202D800F70B8B /* RxMoya */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0ACFEFD2701BBFA00F70B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0ACFEDE2701BBF800F70B8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0ACFEE52701BBF800F70B8B;
+			remoteInfo = "exomind-test";
+		};
+		F0ACFF082701BBFA00F70B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0ACFEDE2701BBF800F70B8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0ACFEE52701BBF800F70B8B;
+			remoteInfo = "exomind-test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0ACFEE62701BBF800F70B8B /* exomind-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exomind-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0ACFEE92701BBF800F70B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0ACFEEB2701BBF800F70B8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F0ACFEF02701BBF800F70B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		F0ACFEF22701BBFA00F70B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0ACFEF52701BBFA00F70B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0ACFEF72701BBFA00F70B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0ACFEFC2701BBFA00F70B8B /* exomind-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "exomind-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0ACFF002701BBFA00F70B8B /* exomind_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exomind_testTests.swift; sourceTree = "<group>"; };
+		F0ACFF022701BBFA00F70B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0ACFF072701BBFA00F70B8B /* exomind-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "exomind-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0ACFF0B2701BBFA00F70B8B /* exomind_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exomind_testUITests.swift; sourceTree = "<group>"; };
+		F0ACFF0D2701BBFA00F70B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0ACFF192701BC7800F70B8B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0ACFF262701CBF600F70B8B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F0ACFF282701CC0000F70B8B /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		F0ACFF2F2701CFB400F70B8B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F0ACFF312701D09B00F70B8B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F0ACFF382701D6A000F70B8B /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		F0ACFF3B2701D6EB00F70B8B /* WeatherContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContract.swift; sourceTree = "<group>"; };
+		F0ACFF3D2701D6F400F70B8B /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		F0ACFF3F2701D70000F70B8B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		F0ACFF442701D82000F70B8B /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
+		F0ACFF462701D83600F70B8B /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		F0ACFF4D2701D8E900F70B8B /* OpenWeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherApi.swift; sourceTree = "<group>"; };
+		F0ACFF4F2701D94200F70B8B /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		F0ACFF522701DCBC00F70B8B /* GetWeatherFromCityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherFromCityResponse.swift; sourceTree = "<group>"; };
+		F0ACFF552701DD2300F70B8B /* WeatherDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataObject.swift; sourceTree = "<group>"; };
+		F0ACFF582701E13E00F70B8B /* WeatherCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityTableViewCell.swift; sourceTree = "<group>"; };
+		F0ACFF61270200F000F70B8B /* ButtonProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonProgressBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0ACFEE32701BBF800F70B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ACFF64270202D800F70B8B /* RxMoya in Frameworks */,
+				F0ACFF5C2701E3F400F70B8B /* Kingfisher in Frameworks */,
+				F0ACFF4C2701D88700F70B8B /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFEF92701BBFA00F70B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFF042701BBFA00F70B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0ACFEDD2701BBF800F70B8B = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF192701BC7800F70B8B /* README.md */,
+				F0ACFEE82701BBF800F70B8B /* exomind-test */,
+				F0ACFEFF2701BBFA00F70B8B /* exomind-testTests */,
+				F0ACFF0A2701BBFA00F70B8B /* exomind-testUITests */,
+				F0ACFEE72701BBF800F70B8B /* Products */,
+				F0ACFF5D2701E91900F70B8B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0ACFEE72701BBF800F70B8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFEE62701BBF800F70B8B /* exomind-test.app */,
+				F0ACFEFC2701BBFA00F70B8B /* exomind-testTests.xctest */,
+				F0ACFF072701BBFA00F70B8B /* exomind-testUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0ACFEE82701BBF800F70B8B /* exomind-test */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF422701D80200F70B8B /* Repositories */,
+				F0ACFF412701D7FB00F70B8B /* Services */,
+				F0ACFF1D2701C05500F70B8B /* Component */,
+				F0ACFF212701CBC800F70B8B /* Features */,
+				F0ACFEE92701BBF800F70B8B /* AppDelegate.swift */,
+				F0ACFEEB2701BBF800F70B8B /* SceneDelegate.swift */,
+				F0ACFEF22701BBFA00F70B8B /* Assets.xcassets */,
+				F0ACFEF42701BBFA00F70B8B /* LaunchScreen.storyboard */,
+				F0ACFF2F2701CFB400F70B8B /* Main.storyboard */,
+				F0ACFEF72701BBFA00F70B8B /* Info.plist */,
+			);
+			path = "exomind-test";
+			sourceTree = "<group>";
+		};
+		F0ACFEFF2701BBFA00F70B8B /* exomind-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF002701BBFA00F70B8B /* exomind_testTests.swift */,
+				F0ACFF022701BBFA00F70B8B /* Info.plist */,
+			);
+			path = "exomind-testTests";
+			sourceTree = "<group>";
+		};
+		F0ACFF0A2701BBFA00F70B8B /* exomind-testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF0B2701BBFA00F70B8B /* exomind_testUITests.swift */,
+				F0ACFF0D2701BBFA00F70B8B /* Info.plist */,
+			);
+			path = "exomind-testUITests";
+			sourceTree = "<group>";
+		};
+		F0ACFF1D2701C05500F70B8B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF60270200F000F70B8B /* ProgressIndicator */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F0ACFF212701CBC800F70B8B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF232701CBD700F70B8B /* Weather */,
+				F0ACFF222701CBD200F70B8B /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F0ACFF222701CBD200F70B8B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF282701CC0000F70B8B /* HomeContract.swift */,
+				F0ACFF262701CBF600F70B8B /* HomePresenter.swift */,
+				F0ACFF312701D09B00F70B8B /* HomeViewController.swift */,
+				F0ACFEEF2701BBF800F70B8B /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F0ACFF232701CBD700F70B8B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF3B2701D6EB00F70B8B /* WeatherContract.swift */,
+				F0ACFF3D2701D6F400F70B8B /* WeatherPresenter.swift */,
+				F0ACFF3F2701D70000F70B8B /* WeatherViewController.swift */,
+				F0ACFF572701E12600F70B8B /* Cell */,
+				F0ACFF382701D6A000F70B8B /* Weather.storyboard */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F0ACFF412701D7FB00F70B8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF432701D81100F70B8B /* Weather */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F0ACFF422701D80200F70B8B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF542701DD1100F70B8B /* DTO */,
+				F0ACFF482701D84400F70B8B /* API */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F0ACFF432701D81100F70B8B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF442701D82000F70B8B /* WeatherServiceProtocol.swift */,
+				F0ACFF462701D83600F70B8B /* WeatherService.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F0ACFF482701D84400F70B8B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF492701D84800F70B8B /* Weather */,
+				F0ACFF4F2701D94200F70B8B /* ApiConstant.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F0ACFF492701D84800F70B8B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF512701DCA500F70B8B /* Response */,
+				F0ACFF4D2701D8E900F70B8B /* OpenWeatherApi.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F0ACFF512701DCA500F70B8B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF522701DCBC00F70B8B /* GetWeatherFromCityResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		F0ACFF542701DD1100F70B8B /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF552701DD2300F70B8B /* WeatherDataObject.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		F0ACFF572701E12600F70B8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF582701E13E00F70B8B /* WeatherCityTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0ACFF5D2701E91900F70B8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0ACFF60270200F000F70B8B /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACFF61270200F000F70B8B /* ButtonProgressBar.swift */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0ACFEE52701BBF800F70B8B /* exomind-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0ACFF102701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-test" */;
+			buildPhases = (
+				F0ACFEE22701BBF800F70B8B /* Sources */,
+				F0ACFEE32701BBF800F70B8B /* Frameworks */,
+				F0ACFEE42701BBF800F70B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "exomind-test";
+			packageProductDependencies = (
+				F0ACFF4B2701D88700F70B8B /* Moya */,
+				F0ACFF5B2701E3F400F70B8B /* Kingfisher */,
+				F0ACFF63270202D800F70B8B /* RxMoya */,
+			);
+			productName = "exomind-test";
+			productReference = F0ACFEE62701BBF800F70B8B /* exomind-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0ACFEFB2701BBFA00F70B8B /* exomind-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0ACFF132701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-testTests" */;
+			buildPhases = (
+				F0ACFEF82701BBFA00F70B8B /* Sources */,
+				F0ACFEF92701BBFA00F70B8B /* Frameworks */,
+				F0ACFEFA2701BBFA00F70B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0ACFEFE2701BBFA00F70B8B /* PBXTargetDependency */,
+			);
+			name = "exomind-testTests";
+			productName = "exomind-testTests";
+			productReference = F0ACFEFC2701BBFA00F70B8B /* exomind-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0ACFF062701BBFA00F70B8B /* exomind-testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0ACFF162701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-testUITests" */;
+			buildPhases = (
+				F0ACFF032701BBFA00F70B8B /* Sources */,
+				F0ACFF042701BBFA00F70B8B /* Frameworks */,
+				F0ACFF052701BBFA00F70B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0ACFF092701BBFA00F70B8B /* PBXTargetDependency */,
+			);
+			name = "exomind-testUITests";
+			productName = "exomind-testUITests";
+			productReference = F0ACFF072701BBFA00F70B8B /* exomind-testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0ACFEDE2701BBF800F70B8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F0ACFEE52701BBF800F70B8B = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F0ACFEFB2701BBFA00F70B8B = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F0ACFEE52701BBF800F70B8B;
+					};
+					F0ACFF062701BBFA00F70B8B = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F0ACFEE52701BBF800F70B8B;
+					};
+				};
+			};
+			buildConfigurationList = F0ACFEE12701BBF800F70B8B /* Build configuration list for PBXProject "exomind-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0ACFEDD2701BBF800F70B8B;
+			packageReferences = (
+				F0ACFF4A2701D88700F70B8B /* XCRemoteSwiftPackageReference "Moya" */,
+				F0ACFF5A2701E3F400F70B8B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = F0ACFEE72701BBF800F70B8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0ACFEE52701BBF800F70B8B /* exomind-test */,
+				F0ACFEFB2701BBFA00F70B8B /* exomind-testTests */,
+				F0ACFF062701BBFA00F70B8B /* exomind-testUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0ACFEE42701BBF800F70B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ACFEF62701BBFA00F70B8B /* LaunchScreen.storyboard in Resources */,
+				F0ACFF392701D6A000F70B8B /* Weather.storyboard in Resources */,
+				F0ACFEF32701BBFA00F70B8B /* Assets.xcassets in Resources */,
+				F0ACFF302701CFB400F70B8B /* Main.storyboard in Resources */,
+				F0ACFF1A2701BC7800F70B8B /* README.md in Resources */,
+				F0ACFEF12701BBF800F70B8B /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFEFA2701BBFA00F70B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFF052701BBFA00F70B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0ACFEE22701BBF800F70B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ACFF402701D70000F70B8B /* WeatherViewController.swift in Sources */,
+				F0ACFF472701D83600F70B8B /* WeatherService.swift in Sources */,
+				F0ACFF562701DD2300F70B8B /* WeatherDataObject.swift in Sources */,
+				F0ACFF502701D94200F70B8B /* ApiConstant.swift in Sources */,
+				F0ACFF592701E13E00F70B8B /* WeatherCityTableViewCell.swift in Sources */,
+				F0ACFF4E2701D8E900F70B8B /* OpenWeatherApi.swift in Sources */,
+				F0ACFF3E2701D6F400F70B8B /* WeatherPresenter.swift in Sources */,
+				F0ACFF292701CC0000F70B8B /* HomeContract.swift in Sources */,
+				F0ACFF62270200F000F70B8B /* ButtonProgressBar.swift in Sources */,
+				F0ACFF272701CBF600F70B8B /* HomePresenter.swift in Sources */,
+				F0ACFF532701DCBC00F70B8B /* GetWeatherFromCityResponse.swift in Sources */,
+				F0ACFEEA2701BBF800F70B8B /* AppDelegate.swift in Sources */,
+				F0ACFEEC2701BBF800F70B8B /* SceneDelegate.swift in Sources */,
+				F0ACFF3C2701D6EB00F70B8B /* WeatherContract.swift in Sources */,
+				F0ACFF452701D82000F70B8B /* WeatherServiceProtocol.swift in Sources */,
+				F0ACFF322701D09B00F70B8B /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFEF82701BBFA00F70B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ACFF012701BBFA00F70B8B /* exomind_testTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ACFF032701BBFA00F70B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ACFF0C2701BBFA00F70B8B /* exomind_testUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0ACFEFE2701BBFA00F70B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0ACFEE52701BBF800F70B8B /* exomind-test */;
+			targetProxy = F0ACFEFD2701BBFA00F70B8B /* PBXContainerItemProxy */;
+		};
+		F0ACFF092701BBFA00F70B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0ACFEE52701BBF800F70B8B /* exomind-test */;
+			targetProxy = F0ACFF082701BBFA00F70B8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0ACFEEF2701BBF800F70B8B /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0ACFEF02701BBF800F70B8B /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		F0ACFEF42701BBFA00F70B8B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0ACFEF52701BBFA00F70B8B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0ACFF0E2701BBFA00F70B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0ACFF0F2701BBFA00F70B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0ACFF112701BBFA00F70B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0ACFF122701BBFA00F70B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0ACFF142701BBFA00F70B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exomind-test.app/exomind-test";
+			};
+			name = Debug;
+		};
+		F0ACFF152701BBFA00F70B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exomind-test.app/exomind-test";
+			};
+			name = Release;
+		};
+		F0ACFF172701BBFA00F70B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-testUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "exomind-test";
+			};
+			name = Debug;
+		};
+		F0ACFF182701BBFA00F70B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "exomind-testUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.francoisdabonot.exomind-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "exomind-test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0ACFEE12701BBF800F70B8B /* Build configuration list for PBXProject "exomind-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0ACFF0E2701BBFA00F70B8B /* Debug */,
+				F0ACFF0F2701BBFA00F70B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0ACFF102701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0ACFF112701BBFA00F70B8B /* Debug */,
+				F0ACFF122701BBFA00F70B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0ACFF132701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0ACFF142701BBFA00F70B8B /* Debug */,
+				F0ACFF152701BBFA00F70B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0ACFF162701BBFA00F70B8B /* Build configuration list for PBXNativeTarget "exomind-testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0ACFF172701BBFA00F70B8B /* Debug */,
+				F0ACFF182701BBFA00F70B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0ACFF4A2701D88700F70B8B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		F0ACFF5A2701E3F400F70B8B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F0ACFF4B2701D88700F70B8B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0ACFF4A2701D88700F70B8B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		F0ACFF5B2701E3F400F70B8B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0ACFF5A2701E3F400F70B8B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		F0ACFF63270202D800F70B8B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0ACFF4A2701D88700F70B8B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F0ACFEDE2701BBF800F70B8B /* Project object */;
+}
